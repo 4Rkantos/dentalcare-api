@@ -46,8 +46,8 @@ class Professional(models.Model):
         return self.name
 
 
-# Appointment
-class Appointment(models.Model):
+# Schedule
+class Schedule(models.Model):
     date = models.DateField()
     time = models.TimeField()
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)

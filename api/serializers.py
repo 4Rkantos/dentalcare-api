@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Patient, Procedure, Professional, Appointment, Budget
+from .models import Patient, Procedure, Professional, Schedule, Budget
 
 class PatientSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,9 +19,9 @@ class ProfessionalSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class AppointmentSerializer(serializers.ModelSerializer):
+class ScheduleSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Appointment
+        model = Schedule
         fields = '__all__'
 
 

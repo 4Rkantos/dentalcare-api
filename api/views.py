@@ -1,8 +1,8 @@
 from rest_framework import generics
-from .models import Patient, Procedure, Professional, Appointment, Budget
+from .models import Patient, Procedure, Professional, Schedule, Budget
 from .serializers import (
     PatientSerializer, ProcedureSerializer, ProfessionalSerializer,
-    AppointmentSerializer, BudgetSerializer
+    ScheduleSerializer, BudgetSerializer
 )
 
 # Patients
@@ -38,15 +38,15 @@ class ProfessionalUpdate(generics.RetrieveUpdateAPIView):
     serializer_class = ProfessionalSerializer
 
 
-# Appointment
-class AppointmentListCreate(generics.ListCreateAPIView):
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
+# Schedule
+class ScheduleListCreate(generics.ListCreateAPIView):
+    queryset = Schedule.objects.all()
+    serializer_class = ScheduleSerializer
 
 
-class AppointmentUpdate(generics.RetrieveUpdateAPIView):
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
+class ScheduleUpdate(generics.RetrieveUpdateAPIView):
+    queryset = Schedule.objects.all()
+    serializer_class = ScheduleSerializer
 
 
 # Budget

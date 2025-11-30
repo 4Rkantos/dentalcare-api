@@ -3,7 +3,7 @@ from .views import (
     PatientListCreate, PatientUpdate,
     ProcedureListCreate, ProcedureUpdate,
     ProfessionalListCreate, ProfessionalUpdate,
-    AppointmentListCreate, AppointmentUpdate,
+    ScheduleListCreate, ScheduleUpdate,
     BudgetListCreate, BudgetUpdate,
 )
 
@@ -20,9 +20,9 @@ urlpatterns = [
     path('professionals/', ProfessionalListCreate.as_view()),
     path('professionals/<int:pk>/', ProfessionalUpdate.as_view()),
 
-    # Appointments
-    path('appointments/', AppointmentListCreate.as_view()),
-    path('appointments/<int:pk>/', AppointmentUpdate.as_view()),
+    # schedules
+    path('schedules/', ScheduleListCreate.as_view()),
+    path('schedules/<int:pk>/', ScheduleUpdate.as_view()),
 
     # Budget
     path('budgets/', BudgetListCreate.as_view()),
