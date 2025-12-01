@@ -68,6 +68,7 @@ class Budget(models.Model):
     validUntil = models.DateField()
 
     STATUS_CHOICES = [
+        ("PROCESSING", "Processing"),
         ("PENDING", "Pending"),
         ("DONE", "Done"),
         ("CANCELLED", "Cancelled"),

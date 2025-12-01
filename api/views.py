@@ -10,51 +10,46 @@ class PatientListCreate(generics.ListCreateAPIView):
     queryset = Patient.objects.all()
     serializer_class = PatientSerializer
 
-
-class PatientUpdate(generics.RetrieveUpdateAPIView):
+class PatientDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Patient.objects.all()
     serializer_class = PatientSerializer
 
 
-# Procedure
+# Procedures
 class ProcedureListCreate(generics.ListCreateAPIView):
     queryset = Procedure.objects.all()
     serializer_class = ProcedureSerializer
 
-
-class ProcedureUpdate(generics.RetrieveUpdateAPIView):
+class ProcedureDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Procedure.objects.all()
     serializer_class = ProcedureSerializer
 
 
-# Professional
+# Professionals
 class ProfessionalListCreate(generics.ListCreateAPIView):
     queryset = Professional.objects.all()
     serializer_class = ProfessionalSerializer
 
-
-class ProfessionalUpdate(generics.RetrieveUpdateAPIView):
+class ProfessionalDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Professional.objects.all()
     serializer_class = ProfessionalSerializer
 
 
-# Schedule
+# Schedules
 class ScheduleListCreate(generics.ListCreateAPIView):
     queryset = Schedule.objects.all()
     serializer_class = ScheduleSerializer
 
-
-class ScheduleUpdate(generics.RetrieveUpdateAPIView):
+class ScheduleDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Schedule.objects.all()
     serializer_class = ScheduleSerializer
 
 
-# Budget
+# Budgets
 class BudgetListCreate(generics.ListCreateAPIView):
     queryset = Budget.objects.all()
     serializer_class = BudgetSerializer
 
-
-class BudgetUpdate(generics.RetrieveUpdateAPIView):
+class BudgetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Budget.objects.all()
     serializer_class = BudgetSerializer
